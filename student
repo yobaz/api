@@ -1,0 +1,66 @@
+package com.example.demo.entity;
+
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "students")
+public class Student {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+	
+	@Column
+	private String name;
+	
+	@Column(name = "birth_date")
+	private String birthDate;
+	
+	@Column
+	private String city;
+	
+	@Column
+	private String timezone;
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getTimezone() {
+		return timezone;
+	}
+	public void setTimezone(String timezone) {
+		this.timezone = timezone;
+	}
+	public String getBirthDate() {
+		return birthDate;
+	}
+	public void setBirthDate(String birthDate) {
+		this.birthDate = birthDate;
+	}
+	public String getCity() {
+		return city;
+	}
+	public void setCity(String city) {
+		this.city = city;
+	}
+	
+	
+	
+	
+}
